@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Özdevinirler proje web sitesi. Çok kameralı araç yeniden tespiti ve takibi projesi için raporlar, takım bilgileri ve proje özeti.">
+  <title>Özdevinirler | Proje Web Sitesi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="topline">TOBB ETÜ · BİL/YAP 495</div>
+        <h1>Özdevinirler</h1>
+        <p class="subtitle">Çok kameralı araç yeniden tespiti ve takibi</p>
+        <nav class="nav">
+          <a href="#ozet">Özet</a>
+          <a href="#takim">Takım</a>
+          <a href="#raporlar">Raporlar</a>
+          <a href="#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="ozet" class="section">
+        <h2>Proje Özeti</h2>
+        <p>
+          Şehir içindeki birden fazla kamerada aynı aracı güvenilir biçimde yeniden tanımak zordur.
+          Bu proje, tek kamera takibi, re-ID ve çizge tabanlı eşleştirme ile araçların kamera ağı boyunca izlenmesini hedefler.
+        </p>
+        <p>
+          Buradaki ana fikir, sadece görüntü benzerliğine bakmak yerine kamera geçiş sırası ve konum ilişkilerini de hesaba katmaktır.
+          Böylece benzer araçlar arasında daha tutarlı bir eşleştirme yapılması amaçlanır.
+        </p>
+        <p>
+          Çıktıda hedef araç için kamera bazlı iz, olası güzergah ve güven değeri gösterilir.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Nasıl Çalışır</h2>
+        <ol class="plain-list">
+          <li><strong>Tespit ve takip:</strong> Videodan araçlar bulunur, aynı kamera içinde kısa izler oluşturulur ve tracklet'ler üretilir.</li>
+          <li><strong>Re-ID ve kalibrasyon:</strong> Araçların görünüş özellikleri çıkarılır, eşleşme güveni kalibre edilir ve gerekirse belirsizlik düşürülür.</li>
+          <li><strong>Çizge tabanlı eşleştirme:</strong> Kamera komşuluk bilgisi ile adaylar süzülür, uygun olanlar seçilip sonuç listelenir.</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>Tanıtım Görseli</h2>
+        <div class="placeholder">
+          <div class="placeholder-title">Buraya mimari diyagram gelecek</div>
+          <div class="placeholder-text">
+            Görsel sonra eklenecek.
+          </div>
+        </div>
+      </section>
+
+      <section id="takim" class="section">
+        <h2>Takım</h2>
+        <table class="team-table">
+          <tr>
+            <td class="photo-cell">
+              <div class="photo-box">Foto</div>
+            </td>
+            <td>
+              <strong>Ege Azca</strong>
+              <div class="team-role">Rol açıklaması eklenecek</div>
+              <div class="team-email"><a href="mailto:eazca@etu.edu.tr">eazca@etu.edu.tr</a></div>
+            </td>
+            <td class="link-cell"><a href="#">LinkedIn</a></td>
+          </tr>
+          <tr>
+            <td class="photo-cell">
+              <div class="photo-box">Foto</div>
+            </td>
+            <td>
+              <strong>Baturalp İskenderoğlu</strong>
+              <div class="team-role">Rol açıklaması eklenecek</div>
+              <div class="team-email"><a href="mailto:biskenderoglu@etu.edu.tr">biskenderoglu@etu.edu.tr</a></div>
+            </td>
+            <td class="link-cell"><a href="#">LinkedIn</a></td>
+          </tr>
+          <tr>
+            <td class="photo-cell">
+              <div class="photo-box">Foto</div>
+            </td>
+            <td>
+              <strong>Savaş Solak</strong>
+              <div class="team-role">Rol açıklaması eklenecek</div>
+              <div class="team-email"><a href="mailto:s.kuru@etu.edu.tr">s.kuru@etu.edu.tr</a></div>
+            </td>
+            <td class="link-cell"><a href="#">LinkedIn</a></td>
+          </tr>
+          <tr>
+            <td class="photo-cell">
+              <div class="photo-box">Foto</div>
+            </td>
+            <td>
+              <strong>Ali Doğan Çamur</strong>
+              <div class="team-role">Rol açıklaması eklenecek</div>
+              <div class="team-email"><a href="mailto:acamur@etu.edu.tr">acamur@etu.edu.tr</a></div>
+            </td>
+            <td class="link-cell"><a href="#">LinkedIn</a></td>
+          </tr>
+          <tr>
+            <td class="photo-cell">
+              <div class="photo-box">Foto</div>
+            </td>
+            <td>
+              <strong>Efe Görkem Akkanat</strong>
+              <div class="team-role">Rol açıklaması eklenecek</div>
+              <div class="team-email"><a href="mailto:mail@etu.edu.tr">mail@etu.edu.tr</a></div>
+            </td>
+            <td class="link-cell"><a href="#">LinkedIn</a></td>
+          </tr>
+        </table>
+
+        <p class="advisor"><strong>Danışman:</strong> Bilgi eklenecek.</p>
+      </section>
+
+      <section id="raporlar" class="section">
+        <h2>Raporlar</h2>
+        <table class="reports-table">
+          <tr>
+            <th>Rapor</th>
+            <th>Açıklama</th>
+            <th>Bağlantılar</th>
+          </tr>
+          <tr>
+            <td>Project Proposal</td>
+            <td>Proje fikri, problem tanımı, literatür ve çalışma planı.</td>
+            <td>
+              <a href="https://drive.google.com/file/d/1zShr_RMS7t2MhjwvrOOP67VX1migv6QA/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+              <a href="https://docs.google.com/document/d/1i0bc2t5T-Rvi0eOXx31CcXsJgK9eWavWGCC5WMj48V4/edit?usp=sharing" target="_blank" rel="noopener">DOCX</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Project Specifications Report</td>
+            <td>Kapsam, kısıtlar, etik konular ve ilk gereksinimler.</td>
+            <td>
+              <a href="https://drive.google.com/file/d/1J4HVMkMWG1-wKOYuFOzVuN-eq0XoVcF1/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+              <a href="https://docs.google.com/document/d/1mxN2R32SypO2JtduWO65yD8JhlsnPp0c/edit?usp=sharing&ouid=112586822866253860394&rtpof=true&sd=true" target="_blank" rel="noopener">DOCX</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Analysis Report</td>
+            <td>Fonksiyonel gereksinimler, kullanım senaryoları ve UI taslağı.</td>
+            <td>
+              <a href="https://drive.google.com/file/d/1iopqMJnZZQMWRs7ED0Xw3KR-2lVh1jUU/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+              <a href="https://docs.google.com/document/d/1CsEZTt_V5MDUU8S7OjH5hrekXSYLr8Ux/edit?usp=sharing&ouid=112586822866253860394&rtpof=true&sd=true" target="_blank" rel="noopener">DOCX</a>
+            </td>
+          </tr>
+          <tr>
+            <td>PKE-Plan</td>
+            <td>Standartlar, kısıtlar, etkiler ve lisans notları.</td>
+            <td>
+              <a href="https://drive.google.com/file/d/1uOsLFY_LZCJbOaCl-Ol5tJuey3QqbcAm/view?usp=sharing" target="_blank" rel="noopener">PDF</a>
+              <a href="https://docs.google.com/document/d/1IRuHpNWkgio2kApc3a50OL_7vT1jUt_6rlEv0PGjoG4/edit?usp=sharing" target="_blank" rel="noopener">DOCX</a>
+            </td>
+          </tr>
+          <tr>
+            <td>High-Level Design</td>
+            <td>Son teslimde eklenecek.</td>
+            <td>PDF / DOCX</td>
+          </tr>
+        </table>
+
+        <p class="folder-note">
+          Yedek erişim için Drive klasörü:
+          <a href="https://drive.google.com/drive/folders/1X82JAXPHmzdjGQt3AwPcJdTsTfMTxWKG?usp=sharing" target="_blank" rel="noopener">ozdevinirler_files</a>
+        </p>
+      </section>
+
+      <section id="iletisim" class="section">
+        <h2>İletişim</h2>
+        <div class="contact-row">
+          <p><strong>GitHub:</strong> Bağlantı eklenecek.</p>
+          <p><strong>E-posta:</strong> <a href="mailto:ozdevinirler@gmail.com">ozdevinirler@gmail.com</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        TOBB Ekonomi ve Teknoloji Üniversitesi · BİL/YAP 495 · Özdevinirler · 2026
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
