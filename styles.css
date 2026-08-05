@@ -202,6 +202,17 @@ h1 {
   font-size: 14px;
 }
 
+.team-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.team-heading strong {
+  white-space: nowrap;
+}
+
 .advisor,
 .folder-note {
   margin-top: 14px;
@@ -310,6 +321,15 @@ h1 {
     overflow-wrap: normal;
   }
 
+  .team-heading {
+    display: block;
+  }
+
+  .team-heading strong {
+    display: block;
+    white-space: normal;
+  }
+
   .team-role {
     margin-top: 0;
     line-height: 1.2;
@@ -317,6 +337,7 @@ h1 {
 
   .team-email {
     margin-top: 4px;
+    margin-bottom: 10px;
     line-height: 1.2;
   }
 
