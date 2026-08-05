@@ -157,7 +157,7 @@ h1 {
 .reports-table th,
 .reports-table td {
   border-top: 1px solid var(--border-light);
-  padding: 12px 10px;
+  padding: 12px 6px;
   vertical-align: top;
   text-align: left;
 }
@@ -168,23 +168,29 @@ h1 {
 }
 
 .photo-cell {
-  width: 90px;
+  width: 84px;
+  vertical-align: middle;
+  padding-right: 0;
 }
 
 .photo-box {
-  width: 72px;
-  height: 72px;
-  border: 1px dashed var(--border-dark);
+  width: 76px;
+  height: 76px;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--photo-text);
-  font-size: 13px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(0,0,0,0.02));
 }
 
 .link-cell {
   width: 90px;
   white-space: nowrap;
+  padding-left: 0;
 }
 
 .team-role {
@@ -252,7 +258,7 @@ h1 {
   .team-table tr {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 10px;
     width: 100%;
     padding: 14px 0;
     border-top: 1px solid var(--border-light);
@@ -270,14 +276,30 @@ h1 {
     min-width: 0;
   }
 
+  .team-table .photo-cell {
+    width: 72px;
+    flex: 0 0 72px;
+    padding-top: 2px;
+  }
+
+  .team-table .photo-box {
+    width: 72px;
+    height: 72px;
+    font-size: 15px;
+  }
+
   .team-table td:first-child {
+    flex: 0 0 72px;
+  }
+
+  .team-table td:nth-child(2) {
     flex: 1 1 auto;
   }
 
   .team-table .link-cell {
     flex: 0 0 auto;
     white-space: nowrap;
-    padding-left: 8px;
+    padding-left: 0;
     text-align: right;
   }
 
