@@ -5,13 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Özdevinirler proje web sitesi. Çok kameralı araç yeniden tespiti ve takibi projesi için raporlar, takım bilgileri ve proje özeti.">
   <title>Özdevinirler | Proje Web Sitesi</title>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch (error) {
+      }
+    }());
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="page">
     <header class="header">
       <div class="container">
-        <div class="topline">TOBB ETÜ · BİL/YAP 495</div>
+        <div class="header-top">
+          <div class="topline">TOBB ETÜ · BİL/YAP 495</div>
+          <button class="theme-toggle" type="button" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">☾</span>
+            <span class="theme-text">Koyu mod</span>
+          </button>
+        </div>
         <h1>Özdevinirler</h1>
         <p class="subtitle">Çok kameralı araç yeniden tespiti ve takibi</p>
         <nav class="nav">
@@ -189,5 +205,51 @@
       </div>
     </footer>
   </div>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const button = document.querySelector('.theme-toggle');
+
+      if (!button) {
+        return;
+      }
+
+      const icon = button.querySelector('.theme-icon');
+      const text = button.querySelector('.theme-text');
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          root.dataset.theme = 'dark';
+          icon.textContent = '☀';
+          text.textContent = 'Açık mod';
+          button.setAttribute('aria-pressed', 'true');
+        } else {
+          delete root.dataset.theme;
+          icon.textContent = '☾';
+          text.textContent = 'Koyu mod';
+          button.setAttribute('aria-pressed', 'false');
+        }
+      }
+
+      let savedTheme = 'light';
+      try {
+        savedTheme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+      } catch (error) {
+      }
+
+      applyTheme(savedTheme);
+
+      button.addEventListener('click', function () {
+        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+
+        try {
+          localStorage.setItem('theme', nextTheme);
+        } catch (error) {
+        }
+
+        applyTheme(nextTheme);
+      });
+    }());
+  </script>
 </body>
 </html>

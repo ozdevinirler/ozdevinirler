@@ -1,14 +1,50 @@
+:root {
+  --page-bg: #ffffff;
+  --page-text: #222222;
+  --link-color: #0b4a8b;
+  --border-light: #d8d8d8;
+  --border-med: #cfcfcf;
+  --border-dark: #999999;
+  --section-border: #e3e3e3;
+  --muted: #555555;
+  --subtitle: #444444;
+  --table-head-bg: #f4f4f4;
+  --placeholder-bg: #fafafa;
+  --placeholder-text: #555555;
+  --photo-text: #777777;
+  --button-bg: #ffffff;
+  --button-text: #222222;
+}
+
+html[data-theme='dark'] {
+  --page-bg: #111418;
+  --page-text: #e7e7e7;
+  --link-color: #7fb1ff;
+  --border-light: #3b4048;
+  --border-med: #4a5059;
+  --border-dark: #6a707a;
+  --section-border: #2e333b;
+  --muted: #b1b7c0;
+  --subtitle: #b9c0c8;
+  --table-head-bg: #1a1f26;
+  --placeholder-bg: #181d24;
+  --placeholder-text: #b7bec7;
+  --photo-text: #a8aeb6;
+  --button-bg: #1b2027;
+  --button-text: #e7e7e7;
+}
+
 body {
   margin: 0;
-  background: #ffffff;
-  color: #222;
+  background: var(--page-bg);
+  color: var(--page-text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.6;
 }
 
 a {
-  color: #0b4a8b;
+  color: var(--link-color);
 }
 
 a:hover {
@@ -21,15 +57,22 @@ a:hover {
 }
 
 .header {
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid var(--border-med);
   padding: 18px 0 16px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .topline {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #234f7c;
+  color: var(--link-color);
   text-transform: uppercase;
 }
 
@@ -42,7 +85,7 @@ h1 {
 .subtitle {
   margin: 0 0 10px;
   font-size: 16px;
-  color: #444;
+  color: var(--subtitle);
 }
 
 .nav {
@@ -52,9 +95,26 @@ h1 {
   font-size: 14px;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-med);
+  background: var(--button-bg);
+  color: var(--button-text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  text-decoration: none;
+}
+
 .section {
   padding: 24px 0;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid var(--section-border);
 }
 
 .section h2 {
@@ -72,8 +132,8 @@ h1 {
 }
 
 .placeholder {
-  border: 1px solid #bfbfbf;
-  background: #fafafa;
+  border: 1px solid var(--border-light);
+  background: var(--placeholder-bg);
   padding: 36px 24px;
 }
 
@@ -83,7 +143,7 @@ h1 {
 }
 
 .placeholder-text {
-  color: #555;
+  color: var(--muted);
   max-width: 700px;
 }
 
@@ -96,14 +156,14 @@ h1 {
 .team-table td,
 .reports-table th,
 .reports-table td {
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid var(--border-light);
   padding: 12px 10px;
   vertical-align: top;
   text-align: left;
 }
 
 .reports-table th {
-  background: #f4f4f4;
+  background: var(--table-head-bg);
   font-weight: bold;
 }
 
@@ -114,11 +174,11 @@ h1 {
 .photo-box {
   width: 72px;
   height: 72px;
-  border: 1px dashed #999;
+  border: 1px dashed var(--border-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #777;
+  color: var(--photo-text);
   font-size: 13px;
 }
 
@@ -152,9 +212,9 @@ h1 {
 }
 
 .footer {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid var(--border-med);
   padding: 18px 0 24px;
-  color: #555;
+  color: var(--muted);
   font-size: 14px;
 }
 
@@ -177,6 +237,10 @@ h1 {
     gap: 12px;
   }
 
+  .header-top {
+    align-items: center;
+  }
+
   .team-table,
   .reports-table,
   .team-table tbody,
@@ -192,11 +256,11 @@ h1 {
     row-gap: 4px;
     width: 100%;
     padding: 14px 0;
-    border-top: 1px solid #d8d8d8;
+    border-top: 1px solid var(--border-light);
   }
 
   .team-table tr:first-child {
-    border-top: 1px solid #d8d8d8;
+    border-top: 1px solid var(--border-light);
   }
 
   .team-table td {
@@ -249,7 +313,7 @@ h1 {
   .reports-table tr {
     display: block;
     padding: 14px 0;
-    border-top: 1px solid #d8d8d8;
+    border-top: 1px solid var(--border-light);
   }
 
   .reports-table tr:first-child {
@@ -275,7 +339,7 @@ h1 {
 
   .reports-table td:nth-child(2) {
     margin-bottom: 8px;
-    color: #444;
+    color: var(--subtitle);
   }
 
   .reports-table td:nth-child(3) {
