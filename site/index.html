@@ -23,9 +23,8 @@
       <div class="container">
         <div class="header-top">
           <div class="topline">TOBB ETÜ · BİL/YAP 495</div>
-          <button class="theme-toggle" type="button" aria-pressed="false">
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Tema değiştir" title="Tema değiştir">
             <span class="theme-icon" aria-hidden="true">☾</span>
-            <span class="theme-text">Koyu mod</span>
           </button>
         </div>
         <h1>Özdevinirler</h1>
@@ -128,7 +127,7 @@
             <td>
               <strong>Efe Görkem Akkanat</strong>
               <div class="team-role">Rol açıklaması eklenecek</div>
-              <div class="team-email"><a href="mailto:mail@etu.edu.tr">mail@etu.edu.tr</a></div>
+              <div class="team-email"><a href="mailto:eakkanat@etu.edu.tr">eakkanat@etu.edu.tr</a></div>
             </td>
             <td class="link-cell"><a href="#">LinkedIn</a></td>
           </tr>
@@ -193,7 +192,7 @@
       <section id="iletisim" class="section">
         <h2>İletişim</h2>
         <div class="contact-row">
-          <p><strong>GitHub:</strong> Bağlantı eklenecek.</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/mirmirkedi/ozdevinirler" target="_blank" rel="noopener">mirmirkedi/ozdevinirler</a></p>
           <p><strong>E-posta:</strong> <a href="mailto:ozdevinirler@gmail.com">ozdevinirler@gmail.com</a></p>
         </div>
       </section>
@@ -215,18 +214,14 @@
       }
 
       const icon = button.querySelector('.theme-icon');
-      const text = button.querySelector('.theme-text');
-
       function applyTheme(theme) {
         if (theme === 'dark') {
           root.dataset.theme = 'dark';
           icon.textContent = '☀';
-          text.textContent = 'Açık mod';
           button.setAttribute('aria-pressed', 'true');
         } else {
           delete root.dataset.theme;
           icon.textContent = '☾';
-          text.textContent = 'Koyu mod';
           button.setAttribute('aria-pressed', 'false');
         }
       }
