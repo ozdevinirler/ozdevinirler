@@ -275,7 +275,9 @@ h1 {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    position: relative;
     width: 100%;
+    padding-right: 88px;
     padding: 14px 0;
     border-top: 1px solid var(--border-light);
   }
@@ -310,13 +312,19 @@ h1 {
 
   .team-table td:nth-child(2) {
     flex: 1 1 auto;
+    min-width: 0;
   }
 
   .team-table .link-cell {
+    position: absolute;
+    top: 14px;
+    right: 0;
     flex: 0 0 auto;
     white-space: nowrap;
     padding-left: 0;
     text-align: right;
+    margin-left: 0;
+    align-self: auto;
   }
 
   .team-table td:first-child strong {
