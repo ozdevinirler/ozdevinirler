@@ -147,6 +147,18 @@ h1 {
   max-width: 700px;
 }
 
+.diagram-figure {
+  margin: 0;
+}
+
+.diagram-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+}
+
 .team-table,
 .reports-table {
   width: 100%;
@@ -394,5 +406,9 @@ h1 {
 
   .contact-row {
     display: block;
+  }
+
+  .diagram-image {
+    border-width: 1px;
   }
 }
